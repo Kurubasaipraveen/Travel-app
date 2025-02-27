@@ -12,24 +12,32 @@ const BookingPopup = ({ onClose }) => {
   const [totalPrice, setTotalPrice] = useState(1582); 
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    const updatedValue = Math.max(0, parseInt(value) || 0);
+    const { name, value, type } = e.target;
+  
+    // If it's a number input, parse it to an integer, else use the raw value
+    const updatedValue = type === "number" ? Math.max(0, parseInt(value) || 0) : value;
+  
     setFormData({ ...formData, [name]: updatedValue });
-
-    // Price Calculation
-    const baseAdultPrice = 1582;
-    const discountAdultPrice = 1322; // Discounted price  adults
-    const baseChildPrice = 1400;
-    const discountChildPrice = 1127; // Discounted price  children
-    const isDiscount = new Date() <= new Date("2023-08-14"); // Discount before Aug 14
-
-    const total =
-      updatedValue * (name === "adults" ? (isDiscount ? discountAdultPrice : baseAdultPrice) : formData.adults * (isDiscount ? discountAdultPrice : baseAdultPrice)) +
-      formData.children * (isDiscount ? discountChildPrice : baseChildPrice);
-
-    setTotalPrice(total);
+  
+    // Price Calculation (Only recalculate when numbers change)
+    if (name === "adults" || name === "children") {
+      const baseAdultPrice = 1582;
+      const discountAdultPrice = 1322;
+      const baseChildPrice = 1400;
+      const discountChildPrice = 1127;
+      const isDiscount = new Date() <= new Date("2023-08-14");
+  
+      const newAdults = name === "adults" ? updatedValue : formData.adults;
+      const newChildren = name === "children" ? updatedValue : formData.children;
+  
+      const total =
+        newAdults * (isDiscount ? discountAdultPrice : baseAdultPrice) +
+        newChildren * (isDiscount ? discountChildPrice : baseChildPrice);
+  
+      setTotalPrice(total);
+    }
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name && formData.email && (formData.adults > 0 || formData.children > 0)) {

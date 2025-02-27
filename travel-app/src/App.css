@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.app.dark {
+  background-color: #1c1c1c;
+  color: white;
+}

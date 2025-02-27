@@ -1,0 +1,39 @@
+.hero {
+    height: 100vh;
+    background: url("https://media.istockphoto.com/id/1416834065/photo/african-elephant-walking-with-tourist-car-stop-by-watching-during-sunset-at-masai-mara.jpg?s=612x612&w=0&k=20&c=OoRz5qTlXU4UTqhrXQ-c4bTO-avWBG-QE30iSOE_1Hg=") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: white;
+  }
+  
+  .hero button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    background: #ff7e5f;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .hero button:hover {
+    background: #feb47b;
+  }
+  

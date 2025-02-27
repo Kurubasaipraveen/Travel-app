@@ -1,0 +1,33 @@
+.faq {
+    padding: 50px;
+    background: #fff;
+  }
+  
+  .faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .faq-item h4 {
+    margin: 0;
+  }
+  
+  .faq-item p {
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .faq-item:hover {
+    background: #ff7e5f;
+    color: white;
+  }
+  

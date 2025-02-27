@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #004d00;
+    color: white;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero {
+    background: url("https://static.wixstatic.com/media/111311_3dea0b4ce12e4605bf86141ff001972c~mv2.webp/v1/fill/w_824,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/travel_result.webp") no-repeat center center/cover;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .cta-btn {
+    background: #ff9900;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .itinerary {
+    padding: 40px;
+    background: #f8f8f8;
+  }
+  
+  .itinerary-card {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .booking {
+    text-align: center;
+    padding: 40px;
+    background: #004d00;
+    color: white;
+  }
+  
+  .custom-booking-btn {
+    background: #ff9900;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+  }
+  /* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gallery */
+.gallery {
+  text-align: center;
+  padding: 40px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 40px;
+  background: #f8f8f8;
+}
+
+.review-card {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* FAQ */
+.faq {
+  padding: 40px;
+}
+
+.faq-item h3 {
+  cursor: pointer;
+}
+
+/* Pricing */
+.pricing {
+  text-align: center;
+  padding: 40px;
+  background: #004d00;
+  color: white;
+}
+
+.plan-card {
+  background: white;
+  color: black;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-form input, .contact-form textarea {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.contact-form button {
+  background: #ff9900;
+  padding: 10px;
+  border: none;
+}
+/* 🌍 Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌅 Hero Section */
+.hero {
+  background: url("https://media.istockphoto.com/id/507362774/photo/travel-around-the-world.jpg?s=170667a&w=0&k=20&c=-lYlZGr3NIp45_YqUY6YGbKcnn7a_DbAHoOEQq3saHw=") center/cover fixed no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
+/* 🎭 Testimonials Section */
+.testimonials {
+  background: linear-gradient(to right, #004d00, #009900);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 💰 Pricing Section */
+.pricing {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #ffcc00, #ff6b6b);
+  color: white;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  margin: 15px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.plan-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ✨ Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
